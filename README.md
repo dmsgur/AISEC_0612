@@ -10,6 +10,8 @@ jupter_ai : 인공지능 모델 학습을 위한 전처리 및 모델 구축과 
   
 lotto_AI : 학습된 모델의 사용자 서비스 구현을 위한 백앤드 미들웨어 서버 및 UI 와 모델의 연동  
 
+lotto_data : 로또 365 회차별 전체 데이터셋 및 last_recent.csv(최근 번호 포함된 데이터셋)
+
 ◎ 개발툴  
 pycharm - flask middle server launch and model and user UI integrate   
 jupyter - local remote share learnning  
