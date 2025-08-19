@@ -85,7 +85,7 @@
     }
 
     #sub_img img {
-      height: 80%;
+      height: 87%;
       max-width: 100.2%
     }
 
@@ -211,7 +211,7 @@
   <h2 id="maintitle" style="font-size:2vw;padding:0.5vw 0;text-align:center;background:orange;color:white"> 인공지능 솔루션
     적대적공격 보안을 위한 학습 [홍길동]</h2>
   <p style="text-align:right;margin-right:3vw;margin-bottom:0.1vw">
-    <a href="https://github.com/dmsgur/AISEC_0612">
+    <a href="https://github.com/dmsgur/AISEC_0612" target="blank">
       view git source repository
     </a>
   </p>
@@ -229,15 +229,15 @@
     <h2 id="sub_title" style="text-align:center;margin:0.2vh 0"></h2>
     <hr style="margin:1vw 5%;border:2px solid gray;margin-bottom:1vh">
     <p id="sub_content" style="height:2.6vh;color:blue;margin:0.3vw 0"></p>
-    <div id="sub_img" style="overflow-y: auto;height:65vh;text-align:center"></div>
+    <div id="sub_img" style="margin-left:3vw;overflow-y: auto;height:65vh;text-align:center"></div>
     <p id="user_fill" style="height:3vh;position:absolute;bottom:6vh"></p>
   </div>
   <span id="display_closer" class="material-symbols-outlined" style="position:absolute;
       top:5.5vw;right:3vw;font-size:2.5vw;z-index:123;cursor:pointer;display:none">
     close
   </span>
-  <span id="img_closer" class="material-symbols-outlined" style="position:absolute;display:none;line-height: 10vw;
-  top:45vh;left:46vw;font-size:10vw;z-index:1234;cursor:pointer;border-radius: 50%">
+  <span id="img_closer" class="material-symbols-outlined" style="position:absolute;display:none;line-height: 4vw;
+  top:45vh;left:46vw;font-size:4vw;z-index:1234;cursor:pointer;border-radius: 50%">
     close
   </span>
   <span id="backbtn" class="material-symbols-outlined arraw"
@@ -315,13 +315,13 @@
   function sprayView(mix, six) {
     $("#sub_title").text(data_sets[mix].sub_title)
     $("#sub_content").text("▣ " + data_sets[mix].sub_content[six])
-    let image_wsize = 19
-    let image_hsize = data_sets[mix].sub_img[six].length > 5 ? 20 : 30
+    let image_wsize = 22
+    let image_hsize = data_sets[mix].sub_img[six].length > 5 ? 15 : 20
 
     let inHtml = ""
     for (let i = 0; i < data_sets[mix].sub_img[six].length; i++) {
       inHtml += `<div style="float:left;margin-left:1vw;margin-bottom:5vw" class="detail_cont" sourceurl="${data_sets[mix].sub_img[six][i].sourceurl}">`
-      inHtml += `<p style="background:lightgray;padding:0.2vw"> ${data_sets[mix].sub_img[six][i].imgtitle}</p>`
+      inHtml += `<p style="background:lightgray;padding:0.2vw;height:2.5rem"> ${data_sets[mix].sub_img[six][i].imgtitle}</p>`
       inHtml += createImageUrl(data_sets[mix].sub_img[six][i].imgurl, 3000, image_wsize, image_hsize, true)
       inHtml += `<p class="elips_cont">${data_sets[mix].sub_img[six][i].imglog}</p></div>`
 
@@ -347,7 +347,7 @@
     $(".logcont").remove()
     $(".urlcont").remove()
     $(".imgcontainer").css({ position: "static", ...protocss, maxWidth: "100%", maxHeight: "100%" })
-    curcontainer.find(".imgcontainer").css({ zIndex: 111, position: "absolute", maxWidth: "92%", height: "82vh", left: "1vw", top: "2vw" }).prepend(`<p class='urlcont' style="text-align:right;margin-bottom:2rem;margin-left:2rem"><a style="color:orange" href="${curcontainer.attr('sourceurl') ? curcontainer.attr('sourceurl') : ''}">${curcontainer.attr('sourceurl') ? '소스보기' : ''}</a><br></p>`).append(`<p class="logcont" style="background:white;padding:0.5vw;border:1px solid gray;position:absolute;bottom:0.3vw;width:95%;left:1.8vw">${curcontainer.find(".elips_cont").text()}</p>`)
+    curcontainer.find(".imgcontainer").css({ zIndex: 111, position: "absolute", maxWidth: "92%", height: "82vh", left: "1vw", top: "2vw" }).prepend(`<p class='urlcont' style="text-align:right;margin-bottom:2rem;margin-left:2rem"><a style="color:orange"  target="blank" href="${curcontainer.attr('sourceurl') ? curcontainer.attr('sourceurl') : ''}">${curcontainer.attr('sourceurl') ? '소스보기' : ''}</a><br></p>`).append(`<p class="logcont" style="background:white;padding:0.5vw;border:1px solid gray;position:absolute;bottom:0.3vw;width:95%;left:1.8vw">${curcontainer.find(".elips_cont").text()}</p>`)
     $("#img_closer").css("display") != "inline" && $("#img_closer").css({ display: "inline" })
     $(".arraw").css("display") == "none" && $(".arraw").css("display", "inline")
     $("#img_closer").on("click", function () {
