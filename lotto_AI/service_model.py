@@ -54,9 +54,6 @@ def printpred(tmodel, x_data, millis_sec):  # 예측 출력함수
     return np.round(recoverData(y_pred, millis_sec)),\
         datetime.fromtimestamp(x_data[-1][-1][7]),\
         datetime.fromtimestamp(millis_sec)
-def recoverData(data_arr, millis_sec):  # (unit numpy_arr,milli second)
-    millis_sec /= (10 ** 8)
-    return data_arr * millis_sec
 def upgradeModel():  # 모델업그레이드
     pass
 def current_errRate(pathname):  # 오차율 출력 함수
@@ -80,3 +77,4 @@ if __name__=="__main__":
     pred,err_rat,lastfit_date,pred_date =pred_lottonumber("LSTM_model_48","current_lotto_08.09.csv","2025-08-16 09:00:00",48)
                                                          #사용자에 수신값 : 모델의 종류, 예측타입스템,예측 일자
     print(pred,err_rat,lastfit_date,pred_date)
+
