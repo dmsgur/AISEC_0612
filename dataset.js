@@ -76,7 +76,7 @@ d2.set_img(1, { imgtitle: "14.모델의 훈련", imgurl: "https://drive.google.c
 d2.set_content("2.3 모델 훈련 평가")//서브 타이틀
 d2.set_img(2, { imgtitle: "15.훈련결과 그래프", imgurl: "https://drive.google.com/file/d/1Kcm_sijIUtfFMEhZ5JjXwyyr1NHqhUDr/view?usp=drive_link", imglog: "훈련데이터와 검증데이터의 손실율, 정확률 시각화 판단", sourceurl: "" })
 d2.set_img(2, { imgtitle: "16.서비스를 위한 리팩토링", imgurl: "https://drive.google.com/file/d/1OFfBHsQvr0WEGVyzG5pMGXDI8Jvof18M/view?usp=drive_link", imglog: "모델 서비스를 위한 코드 리팩토링", sourceurl: "" })
-d2.set_content("2.4 서비스페이지는 네이버 쇼핑리뷰에 탑재")//서브 타이틀
+d2.set_fill("로또 추첨일의 날짜로 당첨번호를 스케일링 한 후 두가지 유형의 모델로 예측값과 오차를 출력, 차후 각 번호의 자리별 다중분류(softmax) 형태의 예측값 출력 개선 예정 ")//사용자 에필로그
 data_sets.push(d2)
 
 // menu3 =============================================================
@@ -106,4 +106,5 @@ d3.set_img(3, { imgtitle: "모델의 저장 및 확인", imgurl: "https://drive.
 d3.set_img(3, { imgtitle: "실제 데이터 입력 및 처리 구현", imgurl: "https://drive.google.com/file/d/1nsc8cGEHEWURyqltrsyFU4haRldB6OPf/view?usp=drive_link", imglog: "가상의 실제 데이터를 입력하여 최종 결과물 처리 구현", sourceurl: "" })
 d3.set_img(3, { imgtitle: "모델 서비스 리팩토링", imgurl: "https://drive.google.com/file/d/15RkvVR8UG1MP-2zP0K4P6AJ2pk6nMbVe/view?usp=drive_link", imglog: "최종 서비스를 위한 모델 함수 리팩토링", sourceurl: "" })
 d3.set_img(3, { imgtitle: "최종 서비스 페이지", imgurl: "", imglog: "최종 서비스 페이지 결과 화면", sourceurl: "" })
+d3.set_fill("로또 추첨일의 날짜로 당첨번호를 스케일링 한 후 두가지 유형의 모델로 예측값과 오차를 출력, 차후 각 번호의 자리별 다중분류(softmax) 형태의 예측값 출력 개선 예정 ")//사용자 에필로그
 data_sets.push(d3)
